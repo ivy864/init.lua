@@ -1,4 +1,5 @@
 -- ui ig
+vim.opt.syntax = "on"
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.bg = 'dark'
@@ -22,5 +23,5 @@ vim.opt.completeopt = 'menuone,noselect'
 
 -- vimscript
 vim.cmd([[
-    "setlocal spell spelllang=en_us
+    setlocal spell spelllang=en_us
 ]])
