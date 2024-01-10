@@ -1,0 +1,59 @@
+M: alt
+C: control
+<leader>: space
+
+
+gc comment line
+
+<C-up> resize window
+<C-down> resize window
+<C-left> resize window
+<C-right> resize window
+
+Treesitter
+C-Space initialize selection
+C-Space node incremental
+C-s scope incremental
+M-space node decremental
+
+Treesitter Movement
+goto next start
+]m  @function.outer
+]] @class.outer
+
+goto next end
+]M @function.outer
+][ @class.outer
+
+goto previous start
+[m @function.outer
+]] @class.outer
+
+goto next start
+[M @function.outer
+[] @class.outer
+
+swap next
+<leader>a @parameter.inner
+swap previous
+<leader>A @parameter.inner
+
+Telescope
+<leader>? find in recently opened files
+<leader><space> Find existing buffer
+<leader>/ search in buffer
+
+<leader>s/ search in open files
+<leader>ss search select
+<leader>gf search git files
+<leader>sf search files
+<leader>sh search help
+<leader>sw search current word
+<leader>sg search by grep
+<leader>sG search by grep on git root
+<leader>sd search diagnostics
+
+Telescope menu
+<C-x> open file as split
+<C-v> open file as vsplit
+<C-t> open file as tab
