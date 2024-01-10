@@ -20,6 +20,7 @@ vim.opt.smartcase = true
 vim.opt.wildmode = 'list'
 vim.opt.mouse = ''
 vim.opt.completeopt = 'menuone,noselect'
+vim.opt.breakindent = true
 
 -- vimscript
 vim.cmd([[
