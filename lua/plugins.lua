@@ -108,3 +108,4 @@ require("lazy").setup({
 
 require("config/nvim-cmp")
 require("config/treesitter")
+require("config/telescope")
