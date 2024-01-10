@@ -30,6 +30,7 @@ require("lazy").setup({
         },
     },
     {
+        -- completion engine
         'hrsh7th/nvim-cmp',
         dependencies = {
             -- lua snippets 
@@ -44,6 +45,29 @@ require("lazy").setup({
             'hrsh7th/cmp-path',
         },
     },
+
+    {
+        -- LSP
+        'neovim/nvim-lspconfig',
+        dependencies = {
+            { 'williamboman/mason.nvim', config = true },
+            'williamboman/mason-lspconfig.nvim',
+
+            { 'j-hui/fidget.nvim', opts = {} },
+
+            'folke/neodev.nvim',
+        },
+    },
+
+    {
+        -- Highlight, edit, and navigate code
+        'nvim-treesitter/nvim-treesitter',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter-textobjects',
+        },
+        build = ':TSUpdate',
+    },
 })
 
 require("config/nvim-cmp")
+require("config/treesitter")
