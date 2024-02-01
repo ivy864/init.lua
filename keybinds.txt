@@ -63,3 +63,23 @@ Telescope menu
 <C-x> open file as split
 <C-v> open file as vsplit
 <C-t> open file as tab
+
+LSP
+<leader>rn rename
+<leader>ca code action
+
+gd goto definition
+gr goto references
+gI goto implementation
+<leader>D type definition
+<leader>ds document symbols
+<leader>ws workspace symbols
+
+K hover documentation
+<C-k> signature documentation
+
+gD goto declaration
+<leader>wa workspace add folder
+<leader>wr workspace remove folder
+<leader>wl workspace list folders
+:Format format current buffer using lsp
