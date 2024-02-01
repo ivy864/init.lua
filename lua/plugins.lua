@@ -110,6 +110,12 @@ require("lazy").setup({
             },
         },
     },
+
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {}
+    },
 })
 
 require("config/nvim-cmp")

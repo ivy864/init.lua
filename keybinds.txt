@@ -2,6 +2,12 @@ M: alt
 C: control
 <leader>: space
 
+vim spellcheck:
+z= open spellcheck menu
+[s go back to misspelled word
+]s go forward to misspelled word
+zg add word to dictionary
+zug remove word from dictionary
 
 gc comment line
 
