@@ -16,7 +16,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "techtuner/aura-neovim",
+    --{"techtuner/aura-neovim"},
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+
     {"folke/which-key.nvim", opts = {}},
 
     {
@@ -119,11 +126,10 @@ require("lazy").setup({
 
     {
         'aznhe21/actions-preview.nvim',
-        
     },
 })
 
+require("config/actions-preview")
 require("config/nvim-cmp")
 require("config/treesitter")
 require("config/telescope")
-require("config/actions-preview")

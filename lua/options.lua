@@ -25,4 +25,5 @@ vim.opt.breakindent = true
 -- vimscript
 vim.cmd([[
     setlocal spell spelllang=en_us
+    hi Normal guibg=NONE ctermbg=NONE
 ]])
