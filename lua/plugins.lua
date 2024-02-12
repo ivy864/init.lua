@@ -116,8 +116,14 @@ require("lazy").setup({
         event = "InsertEnter",
         opts = {}
     },
+
+    {
+        'aznhe21/actions-preview.nvim',
+        
+    },
 })
 
 require("config/nvim-cmp")
 require("config/treesitter")
 require("config/telescope")
+require("config/actions-preview")
