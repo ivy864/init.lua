@@ -50,6 +50,9 @@ end
 
 
 local servers = {
+    clangd = {
+
+    },
     lua_ls = {
         Lua = {
             workspace = { checkThirdParty = false },

@@ -84,6 +84,15 @@ require("lazy").setup({
             options = {
                 icons_enabled = true,
             },
+            sections = {
+                lualine_a = {'mode'},
+                lualine_b = {'branch', 'diff', 'diagnostics'},
+                lualine_c = {'filename'},
+
+                lualine_x = {'%b'},
+                lualine_y = {'progress'},
+                lualine_z = {'location'}
+            },
             inactive_sections = {
                 lualine_a = {'filename'},
                 lualine_b = {},
