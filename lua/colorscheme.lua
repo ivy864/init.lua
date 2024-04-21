@@ -1,6 +1,9 @@
 require('tokyonight').setup {
     style = "night",
     transparent = true,
+    on_highlights = function(highlights, _)
+        highlights.ColorColumn = highlights.CursorLine
+    end,
 }
 
 local colorscheme = 'tokyonight-night'

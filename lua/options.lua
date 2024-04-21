@@ -4,6 +4,7 @@ vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.bg = 'dark'
 vim.opt.signcolumn = 'yes'
+vim.opt.colorcolumn = {80}
 
 -- tabs
 vim.opt.tabstop = 4

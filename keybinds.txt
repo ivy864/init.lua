@@ -83,3 +83,8 @@ gD goto declaration
 <leader>wr workspace remove folder
 <leader>wl workspace list folders
 :Format format current buffer using lsp
+
+Vim default things
+zz cursor to middle of screen
+zt cursor to top of screen
+zb cursor to bottom of screen
