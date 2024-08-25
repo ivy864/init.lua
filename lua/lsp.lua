@@ -59,6 +59,9 @@ local servers = {
             telemetry = { enable = false },
         },
     },
+    pyright = {
+
+    },
 }
 
 require('neodev').setup()
