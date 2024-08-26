@@ -23,6 +23,9 @@ vim.opt.mouse = ''
 vim.opt.completeopt = 'menuone,noselect'
 vim.opt.breakindent = true
 
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 -- vimscript
 vim.cmd([[
     setlocal spell spelllang=en_us
