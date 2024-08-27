@@ -18,11 +18,11 @@ cmp.setup {
     },
     completion = {
         -- noselect
-        completeopt = 'menu,menuone,noinsert',
+        completeopt = 'menu,menuone,noinsert,noselect',
     },
     mapping = cmp.mapping.preset.insert {
         ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        --['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete {},
@@ -31,7 +31,8 @@ cmp.setup {
             select = false,
         },
         ['<C-CR>'] = cmp.mapping.close(),
-        ['<Tab>'] = cmp.mapping(function(fallback)
+
+        ['<C-p>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
             elseif luasnip.expand_or_locally_jumpable() then
