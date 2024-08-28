@@ -60,7 +60,14 @@ local servers = {
         },
     },
     pyright = {
-
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = "workspace",
+                useLibraryCodeFortypes = true,
+                autoImportCompletions = true,
+            }
+        }
     },
 }
 
