@@ -69,6 +69,9 @@ local servers = {
             }
         }
     },
+    jdtls = {
+        root_dir = vim.fs.root(0, {".git", "mvnw", "gradlew"})
+    }
 }
 
 require('neodev').setup()
