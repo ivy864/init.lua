@@ -70,7 +70,7 @@ local servers = {
         }
     },
     jdtls = {
-        enable = false,
+        enabled = false,
     }
 }
 
@@ -89,13 +89,14 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
     function(server_name)
-        if server_name.enable then
-            require('lspconfig')[server_name].setup {
-                capabilities = capabilities,
-                on_attach = on_attach,
-                settings = servers[server_name],
-                filetypes = (servers[server_name] or {}).filetypes,
-            }
+        if servers[server_name].enabled == false then
+            return
         end
+        require('lspconfig')[server_name].setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = servers[server_name],
+            filetypes = (servers[server_name] or {}).filetypes,
+        }
     end,
 }
