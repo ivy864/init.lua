@@ -64,10 +64,10 @@ local servers = {
                 useLibraryCodeFortypes = true,
                 autoImportCompletions = true,
             }
-        }
+        },
     },
     jdtls = {
-        disable = true,
+        disabled = true,
     }
 }
 
@@ -86,9 +86,10 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
     function(server_name)
-        if servers[server_name].disable then
+        if servers[server_name] and servers[server_name].disabled then
             return
         end
+
         require('lspconfig')[server_name].setup {
             capabilities = capabilities,
             on_attach = on_attach,
