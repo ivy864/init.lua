@@ -49,17 +49,14 @@ end
 
 local servers = {
     clangd = {
-        enabled = true,
     },
     lua_ls = {
-        enabled = true,
         Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },
         },
     },
     pyright = {
-        enabled = true,
         python = {
             analysis = {
                 autoSearchPaths = true,
@@ -70,7 +67,7 @@ local servers = {
         }
     },
     jdtls = {
-        enabled = false,
+        disable = true,
     }
 }
 
@@ -89,7 +86,7 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
     function(server_name)
-        if servers[server_name].enabled == false then
+        if servers[server_name].disable then
             return
         end
         require('lspconfig')[server_name].setup {
