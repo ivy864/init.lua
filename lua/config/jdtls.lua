@@ -1,6 +1,7 @@
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "java",
     callback = function()
+
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
@@ -53,5 +54,7 @@ vim.api.nvim_create_autocmd("FileType", {
         }
 
         require("jdtls").start_or_attach(config)
+        local on_attach = require("lsp")
+        on_attach(_, 0)
     end,
 })

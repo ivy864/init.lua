@@ -98,3 +98,6 @@ mason_lspconfig.setup_handlers {
         }
     end,
 }
+
+-- LSPs not using LSPConfig (jdtls) need this
+return on_attach
