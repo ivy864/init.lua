@@ -63,7 +63,13 @@ require("lazy").setup({
             { 'williamboman/mason.nvim', config = true },
             'williamboman/mason-lspconfig.nvim',
 
-            { 'j-hui/fidget.nvim', opts = {} },
+            {
+                'j-hui/fidget.nvim', opts = {
+                    progress = {
+                        suppress_on_insert = true,
+                    },
+                }
+            },
 
             'folke/neodev.nvim',
         },
