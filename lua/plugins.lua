@@ -138,6 +138,12 @@ require("lazy").setup({
         event = "InsertEnter",
         opts = {}
     },
+    {
+        'windwp/nvim-ts-autotag',
+        opts = {
+            enable_close = true,
+        }
+    },
 
     {
         'aznhe21/actions-preview.nvim',

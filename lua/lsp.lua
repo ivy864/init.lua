@@ -68,7 +68,11 @@ local servers = {
     },
     jdtls = {
         disabled = true,
-    }
+    },
+    html = {
+    },
+    cssls={
+    },
 }
 
 
