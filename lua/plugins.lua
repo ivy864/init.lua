@@ -141,7 +141,6 @@ require("lazy").setup({
     {
         'windwp/nvim-ts-autotag',
         opts = {
-            enable_close = true,
         }
     },
 

@@ -1,14 +1,17 @@
 vim.defer_fn(function()
     require('nvim-treesitter.configs').setup {
+        autotag = { enable = false },
         ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'html', 'css' },
         auto_install = false,
         sync_install = false,
         ignore_install = {},
 
 
+
         modules = {},
         highlights = { enable = true },
-        indent = { enable = true},
+        indent = { enable = true },
+
         incremental_selection = {
             enable = true,
             keymaps = {
