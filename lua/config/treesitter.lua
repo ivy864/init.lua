@@ -10,7 +10,7 @@ vim.defer_fn(function()
 
         modules = {},
         highlights = { enable = true },
-        indent = { enable = true },
+        indent = { enable = false },
 
         incremental_selection = {
             enable = true,
