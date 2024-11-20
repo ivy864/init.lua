@@ -42,7 +42,9 @@ vim.api.nvim_create_autocmd("FileType", {
                 --'/path/to/unique/per/project/workspace/folder'
             },
 
-            root_dir = vim.fs.root(0, {".git", "mvnw", "gradlew"}),
+            --root_dir = vim.fs.root(0, {".git", "mvnw", "gradlew"}),
+            --root_dir = vim.fs.expand('%:p:k'),
+            root_dir = vim.fn.getcwd(),
 
             settings = {
                 java = {}

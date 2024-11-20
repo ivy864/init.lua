@@ -57,6 +57,7 @@ local servers = {
         },
     },
     pyright = {
+        disabled = true,
         python = {
             analysis = {
                 autoSearchPaths = true,
@@ -71,7 +72,7 @@ local servers = {
     },
     html = {
     },
-    cssls={
+    cssls = {
     },
 }
 

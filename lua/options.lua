@@ -31,3 +31,6 @@ vim.cmd([[
     setlocal spell spelllang=en_us
     hi Normal guibg=NONE ctermbg=NONE
 ]])
+
+-- language specific
+vim.g.sass_recommended_style = 0
