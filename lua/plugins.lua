@@ -149,6 +149,9 @@ require("lazy").setup({
     },
     {
         'mfussenegger/nvim-jdtls',
+    },
+    {
+        'lewis6991/satellite.nvim'
     }
 })
 
