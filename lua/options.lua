@@ -34,3 +34,11 @@ vim.cmd([[
 
 -- language specific
 vim.g.sass_recommended_style = 0
+vim.g.c_syntax_for_h = 1
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "llvm",
+    callback = function()
+        vim.opt.spell = false
+    end,
+})

@@ -150,9 +150,19 @@ require("lazy").setup({
     {
         'mfussenegger/nvim-jdtls',
     },
+    --[[
     {
         'lewis6991/satellite.nvim'
+    },
+    --]]
+    {
+        'DNLHC/glance.nvim'
+    },
+    {
+        'llvm/llvm.vim'
     }
+
+
 })
 
 require("config/actions-preview")
