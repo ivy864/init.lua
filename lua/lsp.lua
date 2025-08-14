@@ -107,9 +107,7 @@ local mason_lspconfig = require 'mason-lspconfig'
 mason_lspconfig.setup {
     automatic_installation = { },
     ensure_installed = vim.tbl_keys(servers),
-}
 
-mason_lspconfig.setup_handlers {
     function(server_name)
         if servers[server_name] and servers[server_name].disabled then
             return
