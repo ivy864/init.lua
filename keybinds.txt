@@ -88,3 +88,6 @@ Vim default things
 zz cursor to middle of screen
 zt cursor to top of screen
 zb cursor to bottom of screen
+
+<C-o> go backwards in jump list
+<C-i> go forwards in jump list
