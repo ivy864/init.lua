@@ -8,8 +8,9 @@ vim.api.nvim_create_autocmd("FileType", {
         local config = {
             cmd = {
                 -- 💀
-                'java', -- or '/path/to/java17_or_newer/bin/java'
+                --'java', -- or '/path/to/java17_or_newer/bin/java'
                         -- depends on if `java` is in your $PATH env variable and if it points to the right version.
+                '/usr/lib/jvm/java-21-openjdk/bin/java',
 
                 '-Declipse.application=org.eclipse.jdt.ls.core.id1',
                 '-Dosgi.bundles.defaultStartLevel=4',
@@ -22,7 +23,8 @@ vim.api.nvim_create_autocmd("FileType", {
                 '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 
                 -- 💀
-                '-jar', vim.fn.expand('~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar'),
+                '-jar', vim.fn.expand('~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.7.0.v20250331-1702.jar'),
+--                org.eclipse.equinox.launcher_1.7.200.v20240722-2103.jar'),
                      -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
                      -- Must point to the                                                     Change this to
                      -- eclipse.jdt.ls installation                                           the actual version
