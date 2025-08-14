@@ -60,8 +60,8 @@ require("lazy").setup({
         -- LSP
         'neovim/nvim-lspconfig',
         dependencies = {
-            { 'williamboman/mason.nvim', config = true },
-            'williamboman/mason-lspconfig.nvim',
+            { 'mason-org/mason.nvim', config = true },
+            'mason-org/mason-lspconfig.nvim',
 
             {
                 'j-hui/fidget.nvim', opts = {
@@ -160,9 +160,24 @@ require("lazy").setup({
     },
     {
         'llvm/llvm.vim'
-    }
-
-
+    },
+    --[[
+    {
+        'github/copilot.vim'
+    },
+    {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        dependencies = {
+            { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+        },
+        build = "make tiktoken", -- Only on MacOS or Linux
+        opts = {
+          -- See Configuration section for options
+        },
+    -- See Commands section for default commands if you want to lazy load on them
+    },
+    ]]--
 })
 
 require("config/actions-preview")
