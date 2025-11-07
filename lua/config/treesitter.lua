@@ -3,7 +3,7 @@ vim.defer_fn(function()
         autotag = { enable = false },
         ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx',
             'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'html', 'css',
-            'scss', 'htmldjango', 'llvm' },
+            'scss', 'htmldjango', 'llvm', 'php' },
         auto_install = false,
         sync_install = false,
         ignore_install = {},

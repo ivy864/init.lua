@@ -10,6 +10,8 @@ local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
+require'luasnip'.filetype_extend("php", {"html"})
+
 cmp.setup {
     snippet = {
         expand = function(args)

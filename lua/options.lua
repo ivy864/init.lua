@@ -30,6 +30,7 @@ vim.opt.relativenumber = true
 vim.cmd([[
     setlocal spell spelllang=en_us
     hi Normal guibg=NONE ctermbg=NONE
+    filetype plugin on
 ]])
 
 -- language specific

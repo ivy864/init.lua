@@ -150,34 +150,29 @@ require("lazy").setup({
     {
         'mfussenegger/nvim-jdtls',
     },
-    --[[
-    {
-        'lewis6991/satellite.nvim'
-    },
-    --]]
     {
         'DNLHC/glance.nvim'
     },
     {
         'llvm/llvm.vim'
     },
-    --[[
     {
-        'github/copilot.vim'
+    "lervag/vimtex",
+    lazy = false,     -- we don't want to lazy load VimTeX
+    -- tag = "v2.15", -- uncomment to pin to a specific release
+    init = function()
+        -- VimTeX configuration goes here, e.g.
+        vim.g.vimtex_view_method = "general"
+        vim.g.vimtex_compiler_latexmk = {
+            aux_dir = "./.latexmk/aux",
+            out_dir = "./.latexmk/out"
+        }
+    end
     },
     {
-        "CopilotC-Nvim/CopilotChat.nvim",
-        dependencies = {
-            { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
-            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-        },
-        build = "make tiktoken", -- Only on MacOS or Linux
-        opts = {
-          -- See Configuration section for options
-        },
-    -- See Commands section for default commands if you want to lazy load on them
-    },
-    ]]--
+        'nvim-mini/mini.map',
+        version = '*'
+    }
 })
 
 require("config/actions-preview")
@@ -185,3 +180,5 @@ require("config/nvim-cmp")
 require("config/treesitter")
 require("config/telescope")
 require("config/jdtls")
+require("config/map")
+
